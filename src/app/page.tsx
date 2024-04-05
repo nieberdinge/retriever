@@ -1,10 +1,11 @@
 import React from 'react'
-import { arrayBuffer } from 'stream/consumers';
+import Activity from './components/Activity';
 
 export default function Home() {
     
     let cards = (
         <div>
+            {/* <h3>Activity Calendar</h3> */}
             <div className='calendar'>
                 {createCalendar()}
             </div>
@@ -16,7 +17,7 @@ export default function Home() {
 function createCalendar() {
     let days = []
     for (let i = 0; i < 31; i++){
-        days.push(<div className='card' key={i}>day {i+1}</div>)
+        days.push(<Activity key={i} day={i}/>)
     }
     return days
 }

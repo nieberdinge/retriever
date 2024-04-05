@@ -1,4 +1,6 @@
 import React from 'react'
+import Activity from '../components/Activity';
+
 export default function About() {
-    return <h1> About me</h1>;
+    return <div><Activity day={1}></Activity></div>;
 }
