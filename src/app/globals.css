@@ -12,3 +12,8 @@
     margin: 4px;
     flex: 0 1 calc(14% - 8px);
 }
+
+h3 {
+    left: 40%;
+    position: relative;
+}  
