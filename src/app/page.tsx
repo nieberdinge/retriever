@@ -1,13 +1,11 @@
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from '@fullcalendar/daygrid' 
-import Image from "next/image";
+import React from "react";
+import Calendar from "./components/Calendar";
 
 export default function Home() {
   return (
-    <FullCalendar
-      plugins={[ dayGridPlugin ]}
-      initialView="dayGridMonth"
-    />
-
+    <div>
+      <h3>Activity Calendar</h3>
+      <Calendar />
+    </div>
   );
 }
