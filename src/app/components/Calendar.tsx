@@ -11,15 +11,18 @@ function createCalendar() {
   const lastDayOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
 
   const firstMonday = new Date();
-  firstMonday.setDate(firstDayOfMonth.getDate() - ((firstMonday.getDay() + 6) % 7));
+  firstMonday.setDate(firstDayOfMonth.getDate() - ((firstDayOfMonth.getDay() + 6) % 7));
   const lastSunday = new Date();
-  lastSunday.setDate(lastDayOfMonth.getDate() + ((6 - lastSunday.getDay()) % 7));
+  lastSunday.setDate(lastDayOfMonth.getDate() + ((6 - lastDayOfMonth.getDay() + 1) % 7));
 
-  var daysOfMonth = [];
-  for (firstMonday; firstMonday <= lastSunday; firstMonday.setDate(firstMonday.getDate() + 1)) {
-      daysOfMonth.push(new Date(firstMonday));
+  let daysOfMonth = [];
+  for (const curr = new Date(firstMonday); curr <= lastSunday; curr.setDate(curr.getDate() + 1)) {
+      daysOfMonth.push(new Date(curr));
   }
 
+  console.debug(daysOfMonth)
+  console.debug(firstDayOfMonth, lastDayOfMonth, firstMonday, lastSunday)
+  console.debug(firstMonday.getDay() % 7)
   return daysOfMonth.map(day => <Activity key={day.getDay()} day={day}/>)
 }
 
