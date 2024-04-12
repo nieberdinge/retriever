@@ -13,7 +13,13 @@
     flex: 0 1 calc(14% - 8px);
 }
 
+.card:hover {
+    margin: 4px;
+    flex: 0 1 calc(14% - 8px);
+    background: lightgray;
+}
+
 h3 {
     left: 40%;
     position: relative;
-}  
+}
