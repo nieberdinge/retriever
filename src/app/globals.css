@@ -22,7 +22,11 @@
     background-color: azure;
 }
 
+.card:hover {
+    background: lightgray;
+}
+
 h3 {
     left: 40%;
     position: relative;
-}  
+}
