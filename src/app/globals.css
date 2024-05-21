@@ -1,19 +1,32 @@
 .calendar {
-    background: gray;
+    background: #7258ff;
+    padding: 2px;
     display: flex;
     flex-flow: row wrap;
     position: relative;
-    max-width: 80%;
+    width: 80%;
+    max-width: 1000px;
     left: 10%;
     top: 25%;
 }
 
 .card {
-    margin: 4px;
-    flex: 0 1 calc(14% - 8px);
+    margin: 2px;
+    flex: 0 1 calc(14.28% - 4px);
+    color: azure;
+    background-color: #190a6a;
+}
+
+.card:hover{
+    color: #190a6a;
+    background-color: azure;
+}
+
+.card:hover {
+    background: lightgray;
 }
 
 h3 {
     left: 40%;
     position: relative;
-}  
+}
